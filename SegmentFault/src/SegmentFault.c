@@ -13,10 +13,11 @@
 #include <string.h>
 
 int main(void) {
-	char * texto;
+	char * texto = malloc(20);
+	strcpy(texto, "Hola");
 	char * otro_texto;
-	texto = 0;
+	otro_texto = 0;
 
-	memcpy(texto, otro_texto, 10);
+	memcpy(otro_texto, texto, strlen(texto) + 1);
 	return EXIT_SUCCESS;
 }
